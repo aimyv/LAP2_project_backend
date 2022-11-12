@@ -1,0 +1,25 @@
+-- DROP TABLE IF EXISTS public.users;
+-- CREATE TABLE users (
+--     id serial PRIMARY KEY,
+--     user_name varchar(100) NOT NULL UNIQUE,
+--     email varchar(100) NOT NULL UNIQUE,
+--     user_password varchar(100) NOT NULL,
+--     level INT DEFAULT 1,
+--     exp INT DEFAULT 0
+-- 	);
+
+
+-- DROP TABLE IF EXISTS public.habits;
+-- CREATE TABLE habits (
+--     id serial PRIMARY KEY,
+--     name varchar(100) NOT NULL,
+--     difficulty varchar,
+--     frequency varchar DEFAULT 'd',
+--     number_of_rep INT DEFAULT 1,
+--     completed BOOLEAN DEFAULT FALSE,
+--     last_completed DATE DEFAULT NULL ,
+--     streak INT DEFAULT 0,
+--     current_rep INT DEFAULT 0,
+--     task_start_day DATE DEFAULT CURRENT_DATE,
+--     user_id INT NOT NULL
+-- );

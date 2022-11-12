@@ -7,7 +7,7 @@ This is the server-side code for a habit tracker named trackIT.
 ## Deployment
 
 - Server on <a href="https://trackit-habit-tracker.onrender.com/" target="_blank">Render</a>
-- Database on Railway
+- Database on Supabase
 
 ## Technologies
 
