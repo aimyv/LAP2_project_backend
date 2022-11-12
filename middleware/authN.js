@@ -15,18 +15,18 @@ async function auth(req, res, next) {
       rawToken === "Bearer undefined" ||
       JSON.stringify(rawToken) === "{}"
     ) {
-      throw new Error("Anoymouns user");
+      throw new Error("Anonymous user");
     }
     const token = rawToken.split(" ")[1].trim();
     const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findByEmail(decodedToken.email);
-    if (!user) throw new Error("Anoymouns user");
+    if (!user) throw new Error("Anonymous user");
     req.currentUser = decodedToken;
     next();
   } catch (e) {
     console.log(e.message);
     res.status(401).json({
-      message: "Unauthorized, no access please login to your account",
+      message: "Unauthorized, please login to your account",
     });
   }
 }
